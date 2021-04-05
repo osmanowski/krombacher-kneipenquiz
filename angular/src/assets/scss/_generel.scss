@@ -1,0 +1,32 @@
+
+body,
+html {
+  height: 100%;
+  font-family: 'Crimson Text', serif;
+  font-weight: 600;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("src/assets/svg/krombback.jpg");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.is-100perc {
+  width: 100%;}
+
+
+
+.button.is-primary{
+  background-color:#c1a367 !important;
+  border: 1px solid #c1a367 !important;
+  margin-right:10px;
+  margin-bottom: 10px;
+}

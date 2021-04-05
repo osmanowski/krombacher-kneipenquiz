@@ -1,0 +1,19 @@
+<div class="column has-background-grey-lighter box">
+  <form [formGroup]="fragenGroup" id="edit-question-form" class="is-9 column" (ngSubmit)="onSubmit()">
+
+  <div class="field">
+    <label>Frage löschen:</label>
+  </div>
+  <div class="field is-100perc">
+    <div class="select is-full">
+      <select formControlName="idFrage">
+        <option disabled>Fragen</option>
+        <option   *ngFor="let c of fragen" name="frage" ngValue="{{c.id}}" >{{c.frage}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="field">
+    <button type="submit" class="button is-danger">Löschen</button>
+  </div>
+  </form>
+</div>

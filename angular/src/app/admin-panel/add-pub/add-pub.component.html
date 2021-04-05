@@ -1,0 +1,39 @@
+<div class="column has-background-grey-lighter box">
+  <form [formGroup]="addKneipe" id="add-question-form" class="is-9 column" (ngSubmit)="onSubmit()">
+<div class="field">
+  <label  class="control">Kneipe hinzufügen:</label>
+
+</div>
+   <!-- <div>
+      <div class="field">
+        <div class="select is-full">
+          <select formControlName="kneipenbesitzer">
+            <option disabled>Kneipenbesitzer wählen ...</option>
+            <option *ngFor="let c of kneipenbesitzerliste" [ngValue]="c.id">{{c.benutzername}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    -->
+  <div class="field">
+    <div class="control">
+      <input formControlName="kneipenName" class="input" placeholder="Name der Kneipe" type="text">
+    </div>
+  </div>
+
+
+
+    <div class="field">
+      <div class="control">
+        <input formControlName="adresse" class="input" placeholder="Adresse" type="text">
+      </div>
+    </div>
+
+  <div class="field">
+    <div class="control">
+      <button type="submit" class="button is-primary">Hinzufügen</button>
+    </div>
+  </div>
+  </form>
+</div>
+

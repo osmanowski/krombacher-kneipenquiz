@@ -1,0 +1,88 @@
+<div class="column has-background-grey-lighter box">
+  <form [formGroup]="addFrage" id="add-question-form" class="is-9 column" (ngSubmit)="onSubmit()">
+      <div class="field">
+        <h2 class="control">Neue Frage hinzufügen:</h2>
+      </div>
+      <div class="field">
+        <div class="select is-full">
+          <select formControlName="questionPackage">
+            <option disabled>Fragenpaket wählen ...</option>
+            <option *ngFor="let c of fragenpaket" [ngValue]="c.id"
+                    >{{c.paketname}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <input type="text" formControlName="question"
+                 class="input"
+                 id="question"
+                 name="question"
+                 placeholder="Frage">
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <input type="text" formControlName="answera"
+                 class="input"
+                 id="answera"
+                 name="answera"
+                 placeholder="Antwort A">
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <input type="text" formControlName="answerb"
+                 class="input"
+                 id="answerb"
+                 name="answerb"
+                 placeholder="Antwort B">
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <input type="text" formControlName="answerc"
+                 class="input"
+                 id="answerc"
+                 name="answerc"
+                 placeholder="Antwort C">
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <input type="text" formControlName="answerd"
+                 class="input"
+                 id="answerd"
+                 name="answerd"
+                 placeholder="Antwort D">
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <input type="text" formControlName="explanation"
+                 class="input"
+                 id="explanation"
+                 name="explanation"
+                 placeholder="Erklärung">
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <input type="text" formControlName="correct"
+                 class="input"
+                 id="correct"
+                 name="correct"
+                 placeholder="Korrekter Buchstabe">
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <button class="button  is-primary" type="submit">Frage hinzufügen!</button>
+
+        </div>
+      </div>
+  </form>
+
+</div>
+

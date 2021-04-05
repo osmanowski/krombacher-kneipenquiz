@@ -1,0 +1,53 @@
+<div class="bg">
+<app-header></app-header>
+  <div class="columns">
+    <div class="column is-10 is-offset-1">
+      <div class="box">
+        <form [formGroup]="manageGroup" id="choose-package-form" class="is-9 column" (ngSubmit)="onSubmit()">
+          <div class="field">
+            <h2 class="control">Fragenpaket auswahlen</h2>
+          </div>
+          <div class="field">
+            <div class="select is-full">
+              <select formControlName="fragenpaket">
+                <option disabled>Fragenpaket wählen ...</option>
+                <option *ngFor="let c of fragenpaket" [ngValue]="c.id"
+                >{{c.paketname}}</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="field">
+            <div class="control">
+              <input type="number" formControlName="fragenanzahl"
+                     class="input"
+                     id="fragenanzahl"
+                     name="fragenanzahl"
+                     placeholder="Anzahl der Fragen">
+            </div>
+          </div>
+
+
+          <div class="field">
+            <div class="control">
+              <input type="datetime-local" formControlName="startzeit"
+                     class="input"
+                     id="startzeit"
+                     name="startzeit"
+                     placeholder="Startzeit">
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <button class="button  is-primary" type="submit">Quizrunde starten</button>
+
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

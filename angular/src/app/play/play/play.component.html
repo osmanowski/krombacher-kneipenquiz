@@ -1,0 +1,48 @@
+<div class="bg">
+<app-header></app-header>
+  <div id="chosen" data-chosenansw data-chosen='false'></div>
+  <section class="play-panel">
+    <div class="container">
+      <div class="columns">
+        <div class="column box">
+          <div class="field">
+            <div class="control">
+              <button (click)="connectToAll()" class="button btn-primary" type="submit">Mit Server verbinden</button>
+              <button id="sendscore" (click)="sendScore()" hidden class="button btn-primary" type="submit" style="display: none"></button>
+            </div>
+          </div>
+
+            <form class="field has-addons">
+              <div class="control">
+                <input type="text" placeholder="Spiel ID" [(ngModel)]="id" class="input" name="name"> <br>
+              </div>
+              <div class="control">
+                <button id="startbutton" (click)="connectToRoom(id)" class="button is-info" type="submit">Start</button>
+
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </section>
+<section class="play">
+  <div class="container">
+    <div class="columns">
+
+        <div class="column is-6 box is-offset-3 has-background-white-ter"><span id="qno"></span>
+          <div id="frage" class="game-element column is-12 content"><p class="is-unselectable"></p></div>
+          <div class="columns is-multiline box answer-container is-shadowless">
+            <div class="control is-100perc"><p id="proglabel" class="label is-100perc timer"></p></div>
+            <div class="control is-100perc"><p id="currentscore"  class="label is-100perc timer"></p></div>
+
+            <progress id="prog" class="progress is-info is-100perc" max="15"></progress>
+            <div  class="game-element ans column is-6"><button id="antwA"  (click)="markAnswer('A')"  class="button is-100perc"></button></div>
+            <div  class="game-element ans column is-6"><button id="antwB"  (click)="markAnswer('B')"   class="button is-100perc"></button></div>
+            <div  class="game-element ans column is-6"><button id="antwC"  (click)="markAnswer('C')"  class="button is-100perc"></button></div>
+            <div  class="game-element ans  column is-6"><button id="antwD"  (click)="markAnswer('D')"   class="button is-100perc"></button></div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+</div>

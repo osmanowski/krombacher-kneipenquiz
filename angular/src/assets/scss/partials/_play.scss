@@ -1,0 +1,30 @@
+section.play {
+  .answer-container {
+    background-color: transparent;
+    .column{
+      .button {
+        white-space: initial;
+        min-height: 100px;
+      }
+    }
+  }
+  .game-element {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+section.play-panel {
+  margin-bottom: 50px;
+}
+
+.progress {
+  animation: progress 3s ease-in-out;
+}
+
+.timer {
+  text-align: center;
+  margin-bottom: 10px;
+}

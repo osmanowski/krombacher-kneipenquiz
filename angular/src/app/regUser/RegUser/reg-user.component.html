@@ -1,0 +1,49 @@
+<div class="bg">
+  <app-header></app-header>
+
+  <div class="content column has-background-grey-lighter box is-4 is-offset-4">
+    <h1 class="is-medium is-centered">Registrieren</h1>
+    <div class="box">
+      <form [formGroup]="addSpieler" id="add-Spieler-form" class="is-9 column">
+        <div class="field">
+          <div class="control">
+            <input type="text" formControlName="benutzername"
+                   class="input"
+                   id="benutzername"
+                   name="benutzername"
+                   placeholder="Benutzername"
+                   type="text">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input type="password" formControlName="Pw"
+                   class="input"
+                   id="Pw"
+                   name="Pw"
+                   placeholder="Password">
+          </div>
+
+        </div>
+        <div class="field">
+          <div class="control">
+            <input type="text" formControlName="eMail"
+                   class="input"
+                   id="eMail"
+                   name="eMail"
+                   placeholder="E-Mail"
+                   type="text">
+          </div>
+        </div>
+        <div class="control">
+          <button (click)=onSubmit() class="button is-primary">Registrieren</button>
+          <button (click)=backLogin() class="button is-primary">Zurück</button>
+
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+
+</div>

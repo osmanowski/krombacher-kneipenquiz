@@ -1,0 +1,19 @@
+<div class="column has-background-grey-lighter box">
+  <form [formGroup]="kneipenGroup" id="edit-pub-form" class="is-9 column" (ngSubmit)="onSubmit()">
+
+    <div class="field">
+      <label>Kneipe löschen:</label>
+    </div>
+    <div class="field is-100perc">
+      <div class="select is-full">
+        <select formControlName="idKneipe">
+          <option disabled>kneipen</option>
+          <option   *ngFor="let x of kneipen" name="kneipe" ngValue="{{x.id}}" >{{x.name}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <button type="submit" class="button is-danger">Löschen</button>
+    </div>
+  </form>
+</div>

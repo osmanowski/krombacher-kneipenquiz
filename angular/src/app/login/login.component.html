@@ -1,0 +1,43 @@
+<div class="bg">
+  <app-header></app-header>
+<div class="columns">
+  <div class="content column has-background-grey-lighter box is-4 is-offset-4">
+    <h1 class="is-medium is-centered">Login</h1>
+    <div class="box">
+
+      <form class="form-group">
+        <div class="label is-danger" *ngIf='invalidLogin'>{{errorMessage}}</div>
+        <div class="label is-primary" *ngIf='loginSuccess'>{{successMessage}}</div>
+        <div class="field">
+          <div class="control">
+            <label class="label" for="username">User Name :</label>
+            <input type="text" class="input" id="username" [(ngModel)]="username" placeholder="Enter User Name"
+                   name="username">
+          </div>
+
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="label"  for="password">Password:</label>
+            <input type="password" class="input" [(ngModel)]="password" id="password" placeholder="Enter password"
+                   name="password">
+          </div>
+
+        </div>
+        <div class="field">
+          <div class="control">
+            <button (click)=handleLogin() class="button is-primary">Login</button>
+
+        <button (click)=weiterAufReg() class="button is-primary">Registrieren</button>
+          </div>
+
+          <div class="control">
+        <button (click)=weiterAufBesitzerReg() class="button is-primary">Als Kneipenbesitzer Registrieren</button>
+          </div>
+        </div>
+      </form>
+  </div>
+  </div>
+  </div>
+
+</div>

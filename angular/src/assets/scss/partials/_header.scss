@@ -1,0 +1,25 @@
+.main-nav {
+  width: 100%;
+  min-height: 50px;
+  background-color: #fff;
+  margin-bottom: 25px;
+  .logo{
+    background-image: url(src/assets/svg/logo.svg);
+    min-height: 100px;
+    width: auto;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: auto 50px;
+    background-position: center;
+  }
+.goldenline {
+  background-color: #c1a367;
+  background-image: linear-gradient(273deg,
+    rgba(193, 163, 103, 0), #c1a367 27%, #eedca2 57%,
+    rgba(202, 174, 115, 0));
+  background-position: 50%;
+  background-repeat: no-repeat;
+  visibility: visible !important;
+  height: 10px;
+}
+}
